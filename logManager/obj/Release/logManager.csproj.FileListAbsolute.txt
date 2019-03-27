@@ -1,0 +1,5 @@
+C:\Users\mvallejo\Desktop\Personal projects\logManager\logManager\bin\Release\logManager.dll
+C:\Users\mvallejo\Desktop\Personal projects\logManager\logManager\bin\Release\logManager.pdb
+C:\Users\mvallejo\Desktop\Personal projects\logManager\logManager\obj\Release\logManager.csprojResolveAssemblyReference.cache
+C:\Users\mvallejo\Desktop\Personal projects\logManager\logManager\obj\Release\logManager.dll
+C:\Users\mvallejo\Desktop\Personal projects\logManager\logManager\obj\Release\logManager.pdb
