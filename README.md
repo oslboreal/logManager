@@ -1,0 +1,2 @@
+# logManager
+Log system library.
