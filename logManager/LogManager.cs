@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,15 +10,7 @@ namespace logManager
 {
     public class LogManager
     {
-        private static LogManager _instance;
-        public static LogManager Intance
-        {
-            get
-            {
-                return LogManager._instance;
-            }
-        }
-        public List<string> Logs
+        public ConcurrentBag<string> Logs
         {
             get
             {
@@ -25,18 +18,13 @@ namespace logManager
             }
         }
 
-        public delegate void logAddedEventRaiser(List<string> logs);
+        public delegate void logAddedEventRaiser(ConcurrentBag<string> logs);
         public event logAddedEventRaiser OnLogAdded;
-        private List<string> _strings;
-
-        static LogManager()
-        {
-            LogManager._instance = new LogManager();
-        }
+        private ConcurrentBag<string> _strings;
 
         public LogManager()
         {
-            this._strings = new List<string>();
+            this._strings = new ConcurrentBag<string>();
         }
 
         public void Log(string text)
